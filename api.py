@@ -22,6 +22,14 @@ tasks = [
 def get_tasks():
     return jsonify({'tasks': tasks})
 
+@app.route('/')
+def home():
+    return """<a href="https://PythonRestSQLite.alpteja.repl.co/todo/api/v1.0/tasks">
+    API_LINK
+    </a>
+    """
+    # return "/todo/api/v1.0/tasks"
+
 if __name__ == '__main__':
     app.debug = True
     app.run(host = '0.0.0.0',port=5005)
